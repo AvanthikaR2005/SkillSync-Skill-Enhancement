@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSync</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">SkillSync</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#mood">Mood Match</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#join">Join</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h2>Perfect Learning Rhythm</h2>
+    <p>Learning flows best when your mind and mood are in sync. SkillSync helps you find your study rhythm, combining music and focus techniques to elevate your learning journey.</p>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-boxes">
+      <div class="feature">
+        <h3>Smart Mood Detection</h3>
+        <p>Automatically adapt your study sessions based on your emotional state and concentration levels.</p>
+      </div>
+      <div class="feature">
+        <h3>Personalized Playlists</h3>
+        <p>Get curated music suggestions that match your focus needs — from calm melodies to energetic beats.</p>
+      </div>
+      <div class="feature">
+        <h3>Focus Insights</h3>
+        <p>Track your mood trends and understand how your emotions affect productivity over time.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Mood Match -->
+  <section id="mood" class="mood">
+    <h2>Find Your Mood Match</h2>
+    <p>Choose how you're feeling and get a personalized study flow. According to your chosen mood, chords and music will be suggested to boost your focus and balance.</p>
+    <div class="mood-buttons">
+      <button class="mood-btn calm">Calm</button>
+      <button class="mood-btn motivated">Motivated</button>
+      <button class="mood-btn tired">Tired</button>
+      <button class="mood-btn happy">Happy</button>
+    </div>
+    <div id="mood-message" class="mood-message"></div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="community">
+    <h2>Join the SkillSync Community</h2>
+    <p>Connect with learners who share your drive. Discuss challenges, share playlists, and grow together.</p>
+  </section>
+
+  <!-- Join Form -->
+<section id="join" class="join">
+  <h2>Join SkillSync</h2>
+  <form id="joinForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <input type="tel" id="phone" placeholder="Your Contact Number" required />
+    <button type="submit" id="joinBtn">Join Now</button>
+  </form>
+</section>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>📱 +91 7736156656 | ✉️ r.avanthika2005@gmail.com</p>
+    <p>© 2025 SkillSync — Made with ❤️ for learners everywhere.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = document.querySelector("input[name='name']").value;
+  const email = document.querySelector("input[name='email']").value;
+  const phone = document.querySelector("input[name='phone']").value;
+
+  const response = await fetch("http://localhost:8080/join", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, phone }),
+  });
+
+  if (response.ok) {
+    alert("You’ve successfully joined SkillSync 🎉");
+  } else {
+    alert("Something went wrong 😔");
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fdf6f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 28px;
+  color: #ff9aa2;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff9aa2;
+}
+
+/* Hero */
+.hero {
+  background-color: #ffe5e0;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h2 {
+  font-size: 48px;
+  color: #ff9aa2;
+}
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Features */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fffaf5;
+}
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+.feature-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.feature {
+  background-color: #fdf6f0;
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.feature h3 {
+  color: #ff9aa2;
+  font-size: 24px;
+}
+.feature p {
+  font-size: 16px;
+}
+
+/* Mood Match */
+.mood {
+  background-color: #ffe5e0;
+  text-align: center;
+  padding: 80px 20px;
+}
+.mood h2 {
+  font-size: 36px;
+  color: #ff9aa2;
+}
+.mood p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+.mood-btn {
+  padding: 15px 30px;
+  background-color: #fffaf5;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.mood-btn:hover {
+  background-color: #ffb6b9;
+  transform: scale(1.05);
+}
+.mood-message {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Community */
+.community {
+  background-color: #fffaf5;
+  padding: 80px 20px;
+  text-align: center;
+}
+.community h2 {
+  font-size: 36px;
+  color: #ff9aa2;
+}
+.community p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Join Form */
+.join {
+  background-color: #ffe5e0;
+  text-align: center;
+  padding: 80px 20px;
+}
+.join h2 {
+  font-size: 36px;
+  color: #ff9aa2;
+}
+.join-form {
+  background-color: #fffaf5;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 20px;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.join-form input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.join-form button {
+  padding: 15px;
+  background-color: #ff9aa2;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.join-form button:hover {
+  background-color: #ffb6b9;
+}
+
+/* Footer */
+.footer {
+  background-color: #fdf6f0;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 16px;
+  color: #333;
+}
